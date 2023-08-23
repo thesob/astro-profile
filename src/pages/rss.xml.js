@@ -1,4 +1,4 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss'
 
 export async function get() {
   return rss({
@@ -6,6 +6,6 @@ export async function get() {
     description: 'My journey learning Astro',
     site: 'https://thesob.netlify.app',
     items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
-    customData: `<language>en-us</language>`,
-  });
+    customData: `<language>en-us</language>`
+  })
 }
